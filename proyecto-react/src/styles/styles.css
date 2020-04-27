@@ -1,0 +1,33 @@
+
+.App-logo {
+    width: 100vw;
+    height: 100px;
+}
+
+.Fecha{
+    font-size: 14px;
+    text-align: left;
+    font-family: 'Open Sans';
+}
+
+
+.Navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-family: 'Open Sans';
+}
+
+.Sugeridas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-family: 'Open Sans';
+} 
+
+.Principales-textos{
+    font-family: 'Open Sans';
+
+}
