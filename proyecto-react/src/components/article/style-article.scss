@@ -1,0 +1,23 @@
+@import '../normalization';
+
+.article{
+    &_text{
+    font-family: $main-font;
+    font-size: 1rem;
+    width: 50vw;
+    text-align: justify;}
+
+
+    &_figcaption{
+        font-family: $main-font;
+        font-size: 0.8rem;
+    }
+
+}
+
+
+.article h2{
+    font-family: $main-font;
+
+   
+}

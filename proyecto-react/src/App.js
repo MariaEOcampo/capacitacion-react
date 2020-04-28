@@ -1,5 +1,7 @@
 import React from 'react';
-import Header from './components/header'
+import Header from './components/header';
+import Nav from './components/nav';
+import Article from './components/article';
 
 
 
@@ -7,8 +9,8 @@ import Header from './components/header'
   return (
     <div className = "Container">
       <Header/>
-      
-     
+      <Nav/>
+      <Article/>
     </div>
   
   )

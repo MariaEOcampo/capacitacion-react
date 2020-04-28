@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App';
-import logo from '../../images/healthy-logo.jpg';
+import logo from '../../images/logoH.png';
 import '../header/style.scss';
 
 
