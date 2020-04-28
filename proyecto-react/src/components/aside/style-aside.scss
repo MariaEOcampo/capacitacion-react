@@ -1,0 +1,17 @@
+@import '../normalization';
+
+.aside{
+
+    &_image{
+        width: 30vw;
+        height: auto;
+    }
+}
+
+
+
+.aside h3{
+    font-family: $main-font;
+
+   
+}
