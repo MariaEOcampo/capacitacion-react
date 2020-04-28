@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhaina+2&display=swap");
+@import '../normalization';
+
+.header-container {
+    display: flex;
+    width: 100vw;
+    height: 120px;
+    border:1px solid #B0E8F8 ;
+    justify-content: space-between;
+   
+}
+
+.header-logo{
+    height: 100px;
+    
+}
+
+.header-tittle {
+    font-size: 60px;
+    padding-right: 50px;
+    margin-top: 10px;
+    font-family: $main-font;
+    color:#75b205;
+}
