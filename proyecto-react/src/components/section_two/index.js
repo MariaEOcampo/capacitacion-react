@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App';
 import '../section_one/style-section.scss';
-import recipes from '../../images/recipe.jpg'
+import recipes from '../../../public/images/recipe.jpg'
 
 
 function SectionTwo(){

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App';
 import '../article/style-article.scss';
-import foto from '../../images/nutricion.JPG'
+import foto from '../../../public/images/nutricion.JPG'
 
 
 function Article() {

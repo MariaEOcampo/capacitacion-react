@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App';
 import '../section_one/style-section.scss';
-import belleza from '../../images/belleza.jpg'
+import belleza from '../../../public/images/belleza.jpg'
 
 
 function SectionThree(){

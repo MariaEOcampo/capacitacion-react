@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App';
 import '../aside/style-aside.scss';
-import foto from '../../images/desayuno.JPG'
+import foto from '../../../public/images/desayuno.JPG'
 
 function Aside(){
     return(

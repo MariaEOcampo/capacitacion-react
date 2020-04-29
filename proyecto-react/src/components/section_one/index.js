@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App';
 import '../section_one/style-section.scss';
-import fotofitness from '../../images/fitness.jpg';
+import fotofitness from '../../../public/images/fitness.jpg';
 
 function SectionOne(){
     return(

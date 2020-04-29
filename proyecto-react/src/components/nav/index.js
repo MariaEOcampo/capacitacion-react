@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App';
 import '../nav/style-nav.scss';
-import logo from '../../images/logoH.png';
+import logo from '../../../public/images/logoH.png';
 
 
 
