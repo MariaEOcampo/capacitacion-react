@@ -1,17 +1,17 @@
 import React from 'react';
 import '../../App';
 import '../section_one/style-section.scss';
-import recipes from '../../../public/images/recipe.jpg'
 
 function SectionTwo(){
     return(
-        <div className = 'section'>
-            <h3 className = 'section_tittle'>Fitness en casa</h3>
-            <img src = {recipes} className = 'section_image' alt='mujer fitness'/>
-            <p className = 'section_text'>Abdominales combinados con hombros: 45 segundos x 5 series. Se pueden combinar con mancuernas para agregar peso. Hay mancuernas de diferentes pesos y formas. Los pesajes comienzan en los 1kg y hay hasta 4 kilos para levantar cada una.
-            Abdominales en fitball: 45 segundos x 5 series. Los beneficios de la fitball son varios ya que es muy utilizada en los gimnasios como método de tonificación y fortalecimiento muscular en los abdominales y la zona lumbar.
-            Ejercicio de coordinación y abdominales. Utilizando pelotas con peso y con las piernas levantadas tipo V y pasándolas por debajo haciendo “bicicleta”.</p>
-        </div>
+        <section className = "section">
+            <h3 className = "section_tittle">Recetas</h3>
+            <img src = {process.env.PUBLIC_URL + "/images/recipe.jpg"} className = "section_image" alt="mujer fitness"/>
+            <p className = "section_text">Tener más tiempo en el hogar permite, entre otras cosas, poder dedicarle a la preparación de los platos una atención especial. Al disponer de un plan de alimentación semanal se puede ir al supermercado a hacer una compra consciente para poder tener a mano los ingredientes necesarios.
+            “Se puede comer saludable, rico y a un precio accesible estando en cuarentena, para ello es fundamental tener la alacena, la heladera y el freezer bien equipados”, afirma la nutricionista Valentina Martínez, en charla con Infobae.
+            “Hay ingredientes fáciles y que nos puede salvar de más de un apuro, como harina preferentemente integral, polvo de hornear o harina leudante, endulzante o azúcar preferente integral, legumbres ya sean secas o en latas como de lentejas, arvejas, porotos, garbanzos, etc y por último es fundamental contar con un par de condimentos como orégano, pimienta, provenzal, pimentón, ají molido”, afirma la profesional, que a través de su cuenta de Instagram @cocinandoando_ presenta tips y preparaciones.
+            </p>
+        </section>
     )
 }
 
