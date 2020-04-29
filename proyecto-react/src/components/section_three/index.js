@@ -3,7 +3,6 @@ import '../../App';
 import '../section_one/style-section.scss';
 import belleza from '../../../public/images/belleza.jpg'
 
-
 function SectionThree(){
     return(
         <div className = 'section'>

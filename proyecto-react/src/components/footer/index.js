@@ -2,8 +2,6 @@ import React from 'react';
 import '../../App';
 import './style-footer.scss';
 
-
-
 function Footer(){
     return(
         <div className = 'footer'>
