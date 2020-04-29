@@ -5,7 +5,7 @@ import '../nav/style-nav.scss';
 function Nav(){
     return (
         <nav className="nav">
-            <img src ={process.env.PUBLIC_URL + "/images/logoH.png"} className = "nav_logo" alt ="logo"/> 
+            <img src ={process.env.PUBLIC_URL + "/images/logoH.png"} className="nav_logo" alt="logo"/> 
             <input type="checkbox" id="nav_checkMenu"/>
             <label for="checkMenu" class="nav--btn-show">
             <i class="fas fa-bars"></i>
