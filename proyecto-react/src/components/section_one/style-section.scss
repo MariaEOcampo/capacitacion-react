@@ -1,23 +1,23 @@
 @import '../normalization';
 
-.aside{
+.section {
 
-    &_image{
-        width: 30vw;
+    &_image {
+        width: 20vw;
         height: auto;
-    }
 
+    }
     &_text{
         font-family: $main-font;
         font-size: 1rem;
         text-align: justify;
+
     }
+
 }
+.section_tittle {
 
-
-
-.aside h3{
     font-family: $main-font;
+    font-size: 1.2rem;
 
-   
 }

@@ -9,8 +9,8 @@ function Header(){
         <div className="header-container">
         <figure>
             <img src ={logo} className = "header-logo" alt ="logo"/>
-        </figure>
-        <h1 className= "header-tittle">Healthy Page</h1>
+                </figure>
+                <h1 className= "header-tittle">Healthy Page</h1>
         </div>
     )
 }
