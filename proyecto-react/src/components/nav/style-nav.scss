@@ -1,89 +1,61 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 @import '../normalization';
 
-
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:$main-color;
-    color: black;
-    font-family: $main-font;
-    height: 50px;
-    padding: 15px;
-
-    &--btn-show,
-    &--btn-hide {
-        font-size: 14px;
-        display: none;
-    }
-
-      &--menu{
-        display: flex;
-        justify-content: flex-end;
-        align-content: center;
-        list-style: none;
-        font-family:$main-font;
-
-        &_item{
-            font-size: 16px;
-            padding: 0 16px;
+.nav {
+        &_container {
+            width: 100vw;
+            background-color: $main-color;
         }
-
-      
-
-      }
-
-      &_logo {
-        width:auto;
-        height: 50px;
+                &_check-menu{
+                    display: none;
+                }
+                    &_btn-show{
+                        display: none;
+                        width: 30px;
+                        height: 30px;
+                        padding: 10px;
+                            &:hover {
+                                cursor: pointer;
+                                background-color:$tertiary-color;
+                            }
+                    }
+                    &_menu ul {
+                        margin:0;
+                        list-style:none;
+                        padding: 0;
+                        display:flex;
+                        justify-content: flex-end;
+                        font-family: $main-font;
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                             li{
+                                 display: block;
+                                 padding: 15px 20px;
+                                 &:hover{
+                                     background-color:$tertiary-color ;
+                                 }
+                             }
+                    }                                
     }
-  
+
+@media (max-width:768px){
+    .nav{
+        &_btn-show{
+            display: block;
+        }
+            &_menu{
+                position: absolute;
+                background-color: $main-color;
+                width:70%;
+                margin-left:-70%;
+                transition: all 1s;
+                    ul{
+                        flex-direction: column;
+                    }
+            }
+              
+    }
+   
 
 }
-
-#nav_checkMenu {
-    visibility: hidden;
-    position: absolute;
-}
-
-
-
-@media screen and (max-width: 700px) {
-
-    .nav--btn-show, .nav--btn-hide {
-        display: block;
-    }
-
-    .nav--btn-hide {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-
-    .navbar--menu {
-        background-color: $secondary-color;
-        position: fixed;
-        width: 50%;
-        height: 70vh;
-        top: 0;
-        right: -100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 50px 0;
-        transition: 1s;
-    
-    
-        &_item {
-            padding: 20px 0;
-        }           }
-  
-
-        .nav--menu_item a:active ~ .navbar--menu {
-            right: -100%;
-        }
-
-        #nav_checkMenu:checked ~ .navbar--menu {
-            right: 0;
-        }
-}
+     
