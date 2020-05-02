@@ -1,61 +1,67 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 @import '../normalization';
-
-.nav {
-        &_container {
-            width: 100vw;
-            background-color: $main-color;
-        }
-                &_check-menu{
-                    display: none;
+     
+.nav{
+    width: 100%;
+    background-color: $main-color;
+     
+        &_menu ul{
+            margin:0;
+            list-style: none;
+            padding: 0;
+            display: flex;
+                li{
+                    font-family: $main-font;
+                    font-size: 1.3rem;
+                        &:hover{
+                            background-color: $tertiary-color;
+                        }
+                        a {
+                            display: block;
+                            padding: 15px 20px;
+                            text-decoration: none;
+                            color: $secondary-color;
+                        }
                 }
-                    &_btn-show{
-                        display: none;
-                        width: 30px;
-                        height: 30px;
-                        padding: 10px;
-                            &:hover {
-                                cursor: pointer;
-                                background-color:$tertiary-color;
-                            }
-                    }
-                    &_menu ul {
-                        margin:0;
-                        list-style:none;
-                        padding: 0;
-                        display:flex;
-                        justify-content: flex-end;
-                        font-family: $main-font;
-                        font-size: 1.3rem;
-                        font-weight: 700;
-                             li{
-                                 display: block;
-                                 padding: 15px 20px;
-                                 &:hover{
-                                     background-color:$tertiary-color ;
-                                 }
-                             }
-                    }                                
-    }
-
-@media (max-width:768px){
-    .nav{
-        &_btn-show{
-            display: block;
         }
-            &_menu{
-                position: absolute;
-                background-color: $main-color;
-                width:70%;
-                margin-left:-70%;
-                transition: all 1s;
-                    ul{
-                        flex-direction: column;
-                    }
-            }
-              
-    }
-   
+        &_label {
+            display: none;
+            width: 100vw;
+            height: 15px;
+            padding: 10px;
+                &:hover{
+                    cursor: pointer;
+                    background-color: $tertiary-color;
+                }
+        }
+
 
 }
-     
+
+#nav_check-menu{
+    display: none;
+}
+
+@media (max-width:768px){
+
+    .nav_label{
+        display: block;
+    }
+    .nav{
+            
+        &_menu{
+            position: absolute;
+            background-color: $main-color;
+            width: 30%;
+            margin-left: -70%;
+            transition:all 1s;
+            }
+                &_menu ul{
+                    flex-direction: column;
+                }
+               
+        }
+        #nav_check-menu:checked ~ .nav_menu{
+            margin:0;
+    }
+}
