@@ -2,13 +2,15 @@ import React from 'react';
 import '../../App';
 import '../header/style.scss';
 
-function Header(){
+const Header = () => {
     return (
-        <header className="header-container">
-            <figure>
-                <img src ={process.env.PUBLIC_URL + "/images/logoH.png"} className="header-logo" alt="logo"/>
+        <header className="header_container">
+            <figure className="header_figures">
+                <img src ={process.env.PUBLIC_URL + "/images/logoH.png"} className="header_logo" alt="logo"/>
             </figure>
-            <h1 className="header-tittle">Healthy Page</h1>
+            <figure className="header_figures">
+                <img src ={process.env.PUBLIC_URL + "/images/logoH.svg"} className="header_logo-tittle" alt="logo"/>
+            </figure>
         </header>
     )
 }

@@ -1,23 +1,42 @@
 @import '../normalization';
 
-.aside{
+.aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:$main-color;
 
-    &_image{
-        width: 30vw;
+    &_image {
+        width: 50%;
         height: auto;
-    }
+        }
 
-    &_text{
+    &_text {
         font-family: $main-font;
         font-size: 1rem;
         text-align: justify;
+        padding: 20px;
     }
 }
 
-
-
-.aside h3{
+.aside h3 {
     font-family: $main-font;
-
-   
+    text-align: center;
+    font-size: 1.2rem;
 }
+
+@media(min-width:968px){
+    .aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        margin-top: -62%;
+        margin-left:70%;
+        width:30%;
+        background-color:$main-color;
+        margin-bottom: 100px;
+    }
+
+}   

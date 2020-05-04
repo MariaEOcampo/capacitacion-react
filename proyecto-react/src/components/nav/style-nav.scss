@@ -1,19 +1,20 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 @import '../normalization';
      
-.nav{
+.nav {
     width: 100%;
     background-color: $main-color;
      
-        &_menu ul{
+        &_menu ul {
             margin:0;
             list-style: none;
             padding: 0;
             display: flex;
-                li{
+                li {
                     font-family: $main-font;
-                    font-size: 1.3rem;
-                        &:hover{
+                    font-size: 1rem;
+                    text-align: center;
+                        &:hover {
                             background-color: $tertiary-color;
                         }
                         a {
@@ -26,10 +27,10 @@
         }
         &_label {
             display: none;
-            width: 100vw;
-            height: 15px;
+            width: 30px;
+            height: 18px;
             padding: 10px;
-                &:hover{
+                &:hover {
                     cursor: pointer;
                     background-color: $tertiary-color;
                 }
@@ -38,25 +39,23 @@
 
 }
 
-#nav_check-menu{
+#nav_check-menu {
     display: none;
 }
 
-@media (max-width:768px){
-
-    .nav_label{
+@media (max-width:768px) {
+    .nav_label {
         display: block;
     }
-    .nav{
-            
-        &_menu{
+    .nav {           
+        &_menu {
             position: absolute;
-            background-color: $main-color;
-            width: 30%;
+            background-color:$main-color;
+            width: 50%;
             margin-left: -70%;
             transition:all 1s;
             }
-                &_menu ul{
+                &_menu ul {
                     flex-direction: column;
                 }
                

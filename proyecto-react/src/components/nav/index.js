@@ -11,14 +11,16 @@ const Nav = () => {
             </label>
                 <div className="nav_menu">
                     <ul>
-                        <li><a href="www.google.com">Quienes somos</a></li>
+                        <li><a href="www.google.com">Noticias</a></li>
+                        <li><a href="www.google.com">Producto Destacado</a></li>
+                        <li><a href="www.google.com">Fitness</a></li>
                         <li><a href="www.google.com">Recetas</a></li>
                         <li><a href="www.google.com">Belleza</a></li>
-                        <li><a href="www.google.com">Noticias</a></li>
-                        <li><a href="www.google.com">Contactanos</a></li>
+                        <li><a href="www.google.com">Calcular tu masa corporal</a></li>
+                        <li><a href="www.google.com">Yoga y Meditación</a></li>
                     </ul>
                 </div>       
-            </nav>
+        </nav>
     )
 }
 

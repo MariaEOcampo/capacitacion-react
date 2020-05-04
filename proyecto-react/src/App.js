@@ -1,35 +1,19 @@
 import React from 'react';
-import Header from './components/header';
-import Nav from './components/nav';
 import Article from './components/article';
 import Aside from './components/aside';
-import SectionOne from './components/section_one';
-import SectionTwo from './components/section_two';
-import SectionThree from './components/section_three';
-import Footer from './components/footer';
-import './sections.scss';
+import Sections from './components/sections';
+import Layout from './components/layout';
+import Calc from './components/calculator';
 
-
- function App() {
+const App = () =>{
   return (
-    <div className = "Container">
-      <Header/>
-        <Nav/>
+      <Layout>
         <Article/>
         <Aside/>
-         <div className ='sections'>
-           <div className ='sections_container'>
-            <SectionOne />
-            <SectionTwo/>
-            <SectionThree/>
-           </div>
-        </div>
-      <Footer/>
-    </div>
-  
+        <Sections/>
+        <Calc/>
+      </Layout>    
   )
 }
 
-
-
- export default App; 
+export default App; 

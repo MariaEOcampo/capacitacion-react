@@ -2,10 +2,10 @@ import React from 'react';
 import '../../App';
 import '../article/style-article.scss';
 
-function Article() {
+const Article = () => {
     return(
         <article className="article">
-            <h2>La nutrición en cuarentena</h2>
+            <h1>La nutrición en cuarentena</h1>
             <img src ={process.env.PUBLIC_URL + "/images/nutricion.JPG"} className="article_photo" alt="mujer comiendo sentada en la base a la heladera"/>
             <figcaption className="article_figcaption">Los expertos en nutrición desaconsejan el consumo de calorías que no aporten un valor nutricional de calidad al organismo(Shutterstock) </figcaption>
             <p className="article_text">Con la cuarentena obligatoria en la Argentina, los hábitos y costumbres de la población sufrieron cambios abruptos, en especial con respecto a la alimentación. Lo cierto es que en muchas ocasiones esto puede significar una situación estresante para muchos en donde la comida puede ser una de las formas más fáciles e inmediatas para levantar el ánimo y sentirse mejor.
