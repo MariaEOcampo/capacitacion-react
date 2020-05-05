@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import '../../App';
 import './style-calc.scss';
 
-
 const Calc = () => {
     const [peso, setPeso] = useState();
     const handlerPeso = e => setPeso(e.target.value);
