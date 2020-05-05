@@ -5,7 +5,7 @@
     width: 100%;
     background-color: $main-color;
      
-        &_menu ul {
+        &__menu ul {
             margin:0;
             list-style: none;
             padding: 0;
@@ -25,7 +25,7 @@
                         }
                 }
         }
-        &_label {
+        &__label {
             display: none;
             width: 30px;
             height: 18px;
@@ -48,14 +48,14 @@
         display: block;
     }
     .nav {           
-        &_menu {
+        &__menu {
             position: absolute;
             background-color:$main-color;
             width: 50%;
             margin-left: -70%;
             transition:all 1s;
             }
-                &_menu ul {
+                &__menu ul {
                     flex-direction: column;
                 }
                

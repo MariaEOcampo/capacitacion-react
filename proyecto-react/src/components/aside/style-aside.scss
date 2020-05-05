@@ -3,20 +3,54 @@
 .aside {
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color:$main-color;
 
-    &_image {
-        width: 50%;
-        height: auto;
-        }
+    &__first {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    &_text {
-        font-family: $main-font;
-        font-size: 1rem;
-        text-align: justify;
-        padding: 20px;
+        &__image {
+            width: 50%;
+            height: auto;
+        }
+    
+        &__text {
+            font-family: $main-font;
+            font-size: 1rem;
+            text-align: justify;
+            padding: 20px;
+        }
     }
+    &__second {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__image {
+            width: 50%;
+            height: auto;
+        }
+    
+        &__text {
+            font-family: $main-font;
+            font-size: 1rem;
+            text-align: justify;
+            padding: 20px;
+        }
+    }
+    &__third {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+
+        &__image {
+            width: 70%;
+            height: auto;
+        }
+    }
+    
 }
 
 .aside h3 {
@@ -29,14 +63,69 @@
     .aside {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        position: relative;
-        margin-top: -62%;
-        margin-left:70%;
-        width:30%;
+        justify-content: space-around;
         background-color:$main-color;
-        margin-bottom: 100px;
+        position: absolute;
+        top:150px;
+        right:25px;
+        width:350px;
+        height:1000px;
+        background-color:#fff;
+    
+        &__first {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            position: absolute;
+            top: 10px;
+            right: 0;
+            &__image {
+                width: 50%;
+                height: auto;
+                }
+        
+            &__text {
+                font-family: $main-font;
+                font-size: 1rem;
+                text-align: justify;
+                padding: 20px;
+            }
+        }
+        &__second {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            position: absolute;
+            top: 500px;
+            right: 0;
+            &__image {
+                width: 50%;
+                height: auto;
+                }
+        
+            &__text {
+                font-family: $main-font;
+                font-size: 1rem;
+                text-align: justify;
+                padding: 20px;
+            }
+        }
+        &__third {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            position: absolute;
+            top: 1000px;
+            right: 0;
+            &__image {
+                width: 90%;
+                height: auto;
+            }
+        }
     }
+    
 
 }   

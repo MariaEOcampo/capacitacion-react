@@ -2,7 +2,7 @@
 @import '../normalization';
 
 .header {
-    &_container {
+    &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,20 +12,20 @@
     border:2px solid $main-color ;
     box-sizing: border-box;
     }
-        &_logo {
+        &__logo {
             width:auto;
             height: 40px;
             padding:5px;
         }
-        &_logo-tittle {
+        &__logo-tittle {
             width: 40vw;
             height: auto;            
          }
-        &_figures {
+        &__figures {
             display: flex;
             justify-content: space-between;
         }
-        &_tittle {
+        &__tittle {
                 font-size: 24px;
                 padding-right: 50px;
                 margin-top: 70px;
@@ -36,17 +36,17 @@
 }       
 @media(min-width:768px) {
     .header {
-        &_container {
+        &__container {
             height: 100px;
             border:8px solid $main-color ;
     }
-        &_logo {
+        &__logo {
             width:auto;
             height: 80px;
             padding:5px;
     }
 
-        &_logo-tittle {
+        &__logo-tittle {
             width:100%;
             height: auto;            
         }

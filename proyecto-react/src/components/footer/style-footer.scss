@@ -8,19 +8,19 @@
     height:50px;
     background-color: $tertiary-color;
 
-        &_tittle {
+        &__tittle {
             font-family: $main-font;
             font-size: 0.8rem;
             padding: 10px 20px;
         }   
-            &_div-text {
+            &__div-text {
                 text-align: center;
             }
-            &_div {
+            &__div {
                 display: flex;
                 justify-content: space-between;
             }
-            &_icon {
+            &__icon {
                 padding: 25px 10px;
                 margin-left: 25px;
                 font-size: 1.5rem;
