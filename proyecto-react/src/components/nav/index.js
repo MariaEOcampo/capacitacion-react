@@ -11,13 +11,13 @@ const Nav = () => {
             </label>
                 <div className="nav__menu">
                     <ul>
+                        <li><a href="www.google.com">Blog</a></li>
                         <li><a href="www.google.com">Noticias</a></li>
-                        <li><a href="www.google.com">Producto Destacado</a></li>
                         <li><a href="www.google.com">Fitness</a></li>
                         <li><a href="www.google.com">Recetas</a></li>
                         <li><a href="www.google.com">Belleza</a></li>
-                        <li><a href="www.google.com">Calcular tu masa corporal</a></li>
                         <li><a href="www.google.com">Yoga y Meditación</a></li>
+                        <li><a href="www.google.com">Calcular tu masa corporal</a></li>
                     </ul>
                 </div>       
         </nav>

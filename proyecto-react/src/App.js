@@ -1,18 +1,14 @@
 import React from 'react';
-import Article from './components/article';
-import Aside from './components/aside';
-import Sections from './components/sections';
-import Layout from './components/layout';
-import Calc from './components/calculator';
+import { BrowserRouter,Route } from 'react-router-dom';
+import Home from './pages/home';
+import Recipes from './pages/recipes';
 
 const App = () =>{
   return (
-      <Layout>
-        <Article/>
-        <Aside/>
-        <Sections/>
-        <Calc/>
-      </Layout>    
+      <BrowserRouter>
+        <Route exact path="/home" component={Home}/>
+        <Route exact path="/recipes" component={Recipes}/>         
+      </BrowserRouter>   
   )
 }
 
