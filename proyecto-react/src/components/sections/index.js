@@ -34,7 +34,6 @@ const dataSection =[
         p:"Tener más tiempo en el hogar permite, entre otras cosas, poder dedicarle a la preparación de los platos una atención especial. Al disponer de un plan de alimentación semanal se puede ir al supermercado a hacer una compra consciente para poder tener a mano los ingredientes necesarios."
     },
 
-
 ]
 
 const content = dataSection.map((data) => (

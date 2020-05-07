@@ -1,0 +1,13 @@
+@import '../components/normalization';
+
+.section{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+    }
+}

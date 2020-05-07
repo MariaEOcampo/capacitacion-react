@@ -1,29 +1,28 @@
 [
     {
        "id":"1",
-       "nombre":"Torta de Chocolate",
-       "stock":"35",
-       "precio":"5.00",
-       "url":"torta-de-chocolate",
-       "img":"tc.jpg",
-       "fecha":"2019-06-17 15:56:23"
+       "nombre":"Ensalada Cesar",
+       "calorias":"300",
+       "pasos":"Procesá o licuá anchoas, ajo, mayonesa, salsa inglesa, Savora y leche.Cortá el pan en cubitos y dorá en sartén con un poco de aceiteEn un bowl, poné la lechuga y el pollo cortados",
+       "src":"/images/ensalada.jpg",
+       "alt":"Recipiente con ensalada"
     },
     {
-       "id":"2",
-       "nombre":"Pie de Manzana",
-       "stock":"45",
-       "precio":"4.50",
-       "url":"pie-de-manzana",
-       "img":"pm.jpg",
-       "fecha":"2018-08-11 16:25:33"
-    },
-    {
-       "id":"3",
-       "nombre":"Arroz con Leche",
-       "stock":"36",
-       "precio":"2.50",
-       "url":"arroz-con-leche",
-       "img":"al.jpg",
-       "fecha":"2018-08-11 16:25:36"
-    }
+        "id":"2",
+        "nombre":"Pita de Vegetales",
+        "calorias":"300",
+        "pasos":"Cortá los zucchinis en juliana, los champiñones en láminas y doralos en sartén.Rellená con los vegetales cocidos, la palta en gajos, el queso en tiras y condimentá",
+        "src":"/images/pita.png",
+        "alt":"sandwich de pan arabe"
+     },
+     {
+        "id":"3",
+        "nombre":"Hamburguesa",
+        "calorias":"300",
+        "pasos":"En un bowl, colocá carne picada, cebollas ralladas, dientes de ajo picados, perejil picado, ají molido, sal, pimienta y Savora.Amasá por un ratito. Formáburgers del tamaño que prefieras y dejá reposar unos minutos en frío.",
+        "src":"/images/hamburguesa.jpg",
+        "alt":"sandwich de hamburguesa"
+
+     }
+    
 ]
