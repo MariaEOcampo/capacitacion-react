@@ -35,8 +35,6 @@
                     background-color: $tertiary-color;
                 }
         }
-
-
 }
 
 #nav_check-menu {
@@ -44,8 +42,8 @@
 }
 
 @media (max-width:768px) {
-    .nav_label {
-        display: block;
+    .nav__label {
+        display: inline;
     }
     .nav {           
         &__menu {
@@ -54,6 +52,7 @@
             width: 50%;
             margin-left: -70%;
             transition:all 1s;
+           
             }
                 &__menu ul {
                     flex-direction: column;

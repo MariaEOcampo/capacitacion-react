@@ -11,8 +11,8 @@ const Layout = (props) => {
         <React.Fragment>
             <Header/>
             <Nav/>            
-        {props.children}
-        <Footer/>
+                {props.children}
+            <Footer/>
         </React.Fragment>
     )
 }
