@@ -13,7 +13,7 @@ const FormContact = () => {
 
     return(
     <React.Fragment>
-        <h1 className="form__title">¡Contactate con Nosotros!</h1>
+        <h1 className="form__title">¡Contactate con Nosotros ahora!</h1>
             <form onSubmit ={handleSubmit} className="form">
                 <div className="form__label__container">
                     <label className="form__label">Nombre</label>
