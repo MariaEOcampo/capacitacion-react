@@ -2,6 +2,7 @@ import React,{useEffect, useState, Fragment} from 'react';
 import '../pages/style-pages.scss';
 import Layout from '../components/layout';
 import newArticle from '../services/article';
+import Loader from 'react-loader-spinner';
 
 const Article = () => {
 
@@ -33,7 +34,7 @@ return(
         <Layout>
             <div>
             {<div className="section">
-                {loading ? <div> ...Loading</div> : 
+                {loading ? <div><Loader className="dots"/></div> : 
                 <Fragment>
                     <h2 className="section__title" key={newarticles.publishedAt}>{newarticles.title}</h2>
                         <img className="section__image" alt={newarticles.title}src={newarticles.urlToImage}/>  
