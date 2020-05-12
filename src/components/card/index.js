@@ -20,7 +20,6 @@ const CardComment = ({ firstName, lastName, email, commentsNew,id}) => {
       </section>
     </React.Fragment>
   )
- 
 }
 
 export default CardComment

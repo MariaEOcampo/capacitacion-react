@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App';
 import '../nav/style-nav.scss';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
      return (
@@ -11,8 +12,8 @@ const Nav = () => {
             </label>
                 <div className="nav__menu">
                     <ul>
-                        <li><a href="www.google.com">Blog</a></li>
-                        <li><a href="www.google.com">Noticias</a></li>
+                        <li><Link to="/comments">Contactanos</Link></li>
+                        <li><Link to="/article">Noticias</Link></li>
                         <li><a href="www.google.com">Fitness</a></li>
                         <li><a href="www.google.com">Recetas</a></li>
                         <li><a href="www.google.com">Belleza</a></li>

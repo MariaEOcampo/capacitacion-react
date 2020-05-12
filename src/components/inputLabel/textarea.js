@@ -1,23 +1,24 @@
 import React from 'react';
 import '../form/style-form.scss';
 
-const InputLabel = (props) =>{
+const TextArea = (props) =>{
 
   return(
     <React.Fragment>
       <label className="form__label">{props.label}</label>
-        <input 
-        type={props.type}  
+        <textarea 
+        className="form__textarea--input"
+        type={props.type} 
         name={props.name} 
-        onChange={props.change}
+        onChange={props.change} 
         value={props.state}
         placeholder={props.placeholder}
-        className="form__input"  
-        required />
+        maxlength = {props.length}
+        required 
+        />
     </React.Fragment>
   )
   
 }
 
-export default InputLabel
-
+export default TextArea;
