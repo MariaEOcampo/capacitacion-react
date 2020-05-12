@@ -1,0 +1,46 @@
+@import '../normalization';
+
+.card{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        font-family: $main-font;
+        height:200px;
+        align-items: flex-start;
+        margin:40px;
+        border: solid 2px $first-color;
+        border-radius: 20px;
+        box-shadow: 5px 5px 8px #888888;
+    }
+        &__name{
+            padding-left: 10px;
+            padding-top: 0;
+            font-size: 1.2rem;
+        }
+        &__mail{
+            padding-left: 10px;
+            padding-top: 10px;
+            font-size: 1.2rem;
+            color: $first-color-b;
+        }
+        &__comment {
+            display: block;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            width:80%;
+            height: 200px;
+            font-family: $main-font;
+            font-size:1.3rem;
+            text-align: center;
+
+                &-p {
+                
+                   display:block;
+                   margin:0;
+                   width:100%;
+                   word-wrap: break-word;
+                   padding:1%;
+               }
+        }
+}

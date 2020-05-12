@@ -65,6 +65,7 @@ const FormContact = () => {
                         <button type="submit" className="form__button">Enviar</button>
                     </div>    
             </form>
+            
     </React.Fragment>
     )
 }

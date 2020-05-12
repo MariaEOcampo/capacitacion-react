@@ -1,55 +1,43 @@
 import React, { useState } from 'react';
 import Layout from '../components/layout';
-import useForm from '../services/form';
-import CardComments from '../components/comments'
-
+import CardComments from '../components/card';
+import '../components/form/style-form.scss';
+import InputLabel from '../components/inputLabel';
 
 const Comments = () =>{
-    // const[values,handleChange] = useForm();
     
-    const[comments, setComments] = useState([])
-    // // const [suma, setSuma] = useState(0)
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [commentsNew, setCommentsNew] = useState('');
+    const [comments, setComments] = useState([]);
 
-    const handleSubmit = e =>{
+    const onSubmit = e => {
         e.preventDefault()
-        let auxArray = comments
-        // comments.map(comment => auxArray.push(comment, {firstName}))
-        auxArray.push({firstName})
-        console.log(auxArray)
-        setComments(auxArray)
-        // console.log(values)
-        // setComments( prevState => ({comments: [values, ...prevState.comments]}))
-        // console.log(comments)
-        // setSuma(prevState => ({suma: prevState.suma + 1}))
+        let info = { firstName, lastName, email,commentsNew}
+        setComments(prevState => ([...prevState, info]))
     }
-    const [firstName, setFirstName] = useState('')
+    /* const onChange = (event) => setComments({...comments, [event.target.name]:event.target.name}) */
 
-    const handleInput = ({ target }) => setFirstName(target.value) 
-    console.log(comments)
     return(
         <Layout>
             <div>
             <h1 className="form__title">¡Dejanos tu Comentario!</h1>
-            <form onSubmit ={handleSubmit} className="form">
+            <form onSubmit ={onSubmit} className="form">
                 <div className="form__label__container">
-                    <label className="form__label">Nombre</label>
-                        <input 
-                        type="text" 
-                        name="firstName" 
-                        // onChange={handleChange} 
-                        onChange={handleInput}
-                        value={firstName}
-                        placeholder="Ingresa tu nombre"
-                        className="form__input"  
-                        required />
+                    <InputLabel label="Nombre"
+                    name ="firstName"
+                    value = {setFirstName}
+                    change = {e => setFirstName(e.target.value)}
+                    placeholder="Ingresa tu nombre"/>                   
                 </div>
-                {/* <div className="form__label__container">   
+                <div className="form__label__container">   
                     <label className="form__label">Apellido</label>
                         <input 
                         type="text" 
                         name="lastName" 
-                        onChange={handleChange} 
-                        value={values.lastName||""}
+                        onChange={e => setLastName(e.target.value)} 
+                        value={lastName}
                         placeholder="Ingresa tu apellido"
                         className="form__input"  
                         required />
@@ -59,29 +47,32 @@ const Comments = () =>{
                         <input 
                         type="email" 
                         name="email" 
-                        onChange={handleChange} 
-                        value={values.email || ""}
+                        onChange={e => setEmail(e.target.value)} 
+                        value={email}
                         placeholder="ejemplo@ejemplo.com"
                         className="form__input-mail"  
                         required />
-                </div> */}
-                {/* <div className="form__textarea">        
+                </div>
+                <div className="form__textarea">        
                     <label className="form__label">Dejanos tu consulta:</label>
                         <textarea 
                         className="form__textarea--input"
                         type="text" 
-                        name="comment" 
-                        onChange={handleChange} 
-                        value={values.comment || ""}
+                        name="comments" 
+                        onChange={e => setCommentsNew(e.target.value)}  
+                        value={commentsNew}
                         placeholder="Esperamos tu consulta o comentario!"
+                        maxlength = "100"
                         required 
                         />
-                    </div> */}
+                    </div> 
                     <div className="form__button__container">    
                         <button type="submit" className="form__button">Enviar</button>
                     </div>    
             </form>
-                 <CardComments values={comments} />
+            {
+                    comments.map(comment => <CardComments {...comment} />)
+                }
             </div>
         </Layout>
     )
@@ -89,3 +80,15 @@ const Comments = () =>{
 }
 
 export default Comments
+
+/* 
+
+<label className="form__label">Nombre</label>
+                        <input 
+                        type="text" 
+                        name="firstName" 
+                        onChange={e => setFirstName(e.target.value)}
+                        value={firstName}
+                        placeholder="Ingresa tu nombre"
+                        className="form__input"  
+                        required /> */
