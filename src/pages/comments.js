@@ -14,39 +14,35 @@ const Comments = () =>{
     const [commentsNew, setCommentsNew] = useState('');
     const [comments, setComments] = useState([]);
     
-     const initialValues = {
-        firstName:"", 
-        /* lastName:"",
-        email:"", */
-        /* commentsNew:"", */
-         firstNameError:"",
-       /*  lastNameError:"",
-        emailError:"",
-        commentsNewError:"", */
-
-     } 
-
-    /*  const validate = () =>{
-    let firstNameError="";
-    if(!initialValues.firstName){
-        firstNameError ="Nombre no puede estar vacío"
-      }
-      if(firstNameError){
-          setEmail({firstNameError})
-          return false 
-      }
-      return true
-    }  */
-
+    const [requiredfirstName, setRequiredFirstName] = useState(false);
+    const [requiredlastName, setRequiredLastName] = useState(false);
+    const [requiredEmail, setRequiredEmail] = useState(false);
+    const [requiredCommentsNew, setRequiredCommentsNew] = useState(false);    
 
     const onSubmit = e => {
-        e.preventDefault()
-        /* const isValid = validate()
-        if (isValid){ */
+        e.preventDefault();
+      /*   console.log("submit", firstName) */
+        if(firstName === ''){
+            setRequiredFirstName(true)
+            return false
+        }
+        if(lastName === ''){
+            setRequiredLastName(true)
+            return false
+        }
+        if(email === ''){
+            setRequiredEmail(true)
+            return false
+        }
+        if(commentsNew === ''){
+            setRequiredCommentsNew(true)
+        }
+        else{
          let info = { firstName, lastName, email,commentsNew}
             setComments(prevState => ([...prevState, info]))
             }
-    /*  } */ 
+            
+        }
     
     
     return(
@@ -61,9 +57,9 @@ const Comments = () =>{
                     value = {setFirstName}
                     change = {e => setFirstName(e.target.value)}
                     placeholder="Ingresa tu nombre"
-                    required/>                   
+                    requiredMsg={requiredfirstName}
+                    />                   
                 </div>
-               {/* <div>{initialValues.firstNameError}</div>  */}
                 <div className="form__label__container">  
                     <InputLabel label="Apellido"
                     type = "text"
@@ -71,7 +67,7 @@ const Comments = () =>{
                     value = {setLastName}
                     change = {e => setLastName(e.target.value)}
                     placeholder="Ingresa tu apellido"
-                    required/>
+                    requiredMsg={requiredlastName}/>
                 </div>        
                 <div className="form__label__container">  
                     <InputLabel label="Email"
@@ -80,17 +76,18 @@ const Comments = () =>{
                     value = {setEmail}
                     change = {e => setEmail(e.target.value)}
                     placeholder="ejemplo@ejemplo.com"
-                    required/>
+                    requiredMsg={requiredEmail}/>
                 </div>
                 <div className="form__textarea">
                     <TextArea
+                    label="Escribinos!"
                     type="text"
                     name="comments" 
                     change={e => setCommentsNew(e.target.value)}
                     value={setCommentsNew}
                     placeholder="Esperamos tu consulta o comentario!"
                     maxlength ="150"
-                    required 
+                    requiredMsg={requiredCommentsNew}
                     />        
                     </div> 
                     <div className="form__button__container">
