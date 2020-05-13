@@ -1,25 +1,28 @@
 import React,{useEffect, useState, Fragment} from 'react';
 import '../pages/style-pages.scss';
 import Layout from '../components/layout';
-import newArticle from '../services/article';
+import newPhoto from '../services/fitness';
 import Loader from 'react-loader-spinner';
 
-const Article = () => {
+const Fitness = () => {
 
-const [articles,setArticles] = useState([]);
+const [photos,setPhotos] = useState([]);
 const [loading,setLoading] =useState(true);
 
 useEffect(() =>{
-    newArticle().then(res => {
-        setArticles(res)
-        setLoading(false)
+    newPhoto().then(res => {
+        setPhotos(res)
+        setLoading(false)    
     }); 
      
 },[] )
+console.log('hola')
 
-console.log(articles)
-
-const newarticles = articles[0]
+/* const content = photosNew.map((data) => (
+    <React.Fragment>
+      <h2>{data.description}</h2>
+    </React.Fragment>
+  )); */
 
 return(
     <React.Fragment>
@@ -28,9 +31,7 @@ return(
             {<div className="section__container">
                 {loading ? <div><Loader className="dots"/></div> : 
                 <Fragment>
-                    <h2 className="section__title" key={newarticles.publishedAt}>{newarticles.title}</h2>
-                        <img className="section__image" alt={newarticles.title}src={newarticles.urlToImage}/>  
-                        <p className="section__text">{newarticles.description}</p>  
+                  {/*   {content} */}
                 </Fragment>}             
              </div>}
              </div>
@@ -39,4 +40,4 @@ return(
     )
 } 
 
-export default Article;
+export default Fitness;

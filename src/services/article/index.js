@@ -1,12 +1,12 @@
 import mockArticle from './mock.json';
+import { noticeApi } from '../../config';
 
 const getNews = async () => {
-    const data = await fetch ("https://newsapi.org/v2/everything?q=healthy&language=es&pageSize=4&apiKey=2331c8ce965f486da28a2da30a8d996e");
+    const data = await fetch (`${noticeApi.URL_1}q=${noticeApi.Q}&language=${noticeApi.LANGUAGE}&pagesize=${noticeApi.PAGES}&apiKey=${noticeApi.API_KEY}`);
     const articles = await data.json();
     console.log(articles)
     return articles.articles
 }
-
 
 const newArticle = () => {
    return process.env.REACT_APP_MOCK === "true" ? mockArticle : getNews();

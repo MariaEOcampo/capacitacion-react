@@ -2,7 +2,13 @@ import React from 'react';
 import '../form/style-form.scss';
 
 const TextArea = (props) =>{
-const {requiredMsg = false} = props;
+const {requiredMsg = false,
+type,
+name,
+change,
+state,
+placeholder,
+length} = props;
   return(
     <React.Fragment>
     <div className="text__container">
@@ -10,16 +16,16 @@ const {requiredMsg = false} = props;
             <label className="form__label--text">{props.label}</label>
                 <textarea 
                 className="form__textarea--input"
-                type={props.type} 
-                name={props.name} 
-                onChange={props.change} 
-                value={props.state}
-                placeholder={props.placeholder}
-                maxLength = {props.length}
+                type={type} 
+                name={name} 
+                onChange={change} 
+                value={state}
+                placeholder={placeholder}
+                maxLength = {length}
                 />
         </div>
         <div>
-            {requiredMsg && <label className="form__required--text">Campo Obligatorio</label>}
+        {requiredMsg ? <p className="form__required--text">Campo Obligatorio</p> :<div className="div__form"/>} 
         </div>
     </div>    
     </React.Fragment>

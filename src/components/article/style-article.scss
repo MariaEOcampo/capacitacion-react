@@ -34,14 +34,19 @@
             }
 }
 
-.article h1 {
+.article__title {
     font-family: $main-font;
     text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-top:10px;
+    font-size: 1.2rem;
 }
 
 @media(min-width:768px) {
-    .article h1{
-        font-size: 2.5rem;
+    .article__title{
+        font-size: 2rem;
+
     }
 }
 @media(min-width:968px){
@@ -82,10 +87,10 @@
             top:-75px;
         }
     }
-    .article h1 {
+    .article__title {
         font-family: $main-font;
         text-align: center;
         padding-left: 200px;
-        padding-top: 40px;
+        padding-top: -10px;
     }
 }

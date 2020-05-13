@@ -79,7 +79,6 @@
                     &:disabled{
                         background-color: $secondary-color;
                     }
-                
 
               &__container{
                display: flex;
@@ -102,6 +101,7 @@
             font-size: 0.8rem;
             color: red;
             margin-left: 30px;
+            font-weight: 700;
         }
 
 
@@ -109,4 +109,7 @@
     .text__container{
         display:inline-block;
     } 
+    .div__form{
+        height: 22px;
+    }
 }

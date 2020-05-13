@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App';
 import '../article/style-article.scss';
+import { Link } from 'react-router-dom';
 
 const dataArticle = [
     {
@@ -14,7 +15,7 @@ const dataArticle = [
 
 const content = dataArticle.map((data) => (
     <React.Fragment>
-      <h1>{data.tittle}</h1>
+      <Link to='../../pages/article.js' className="article__title"><h1>{data.tittle}</h1></Link>
       <img src={process.env.PUBLIC_URL + data.src} className="article__photo" alt={data.alt} />
       <figcaption className="article__figcaption">{data.figText}</figcaption>
       <p className="article__text">{data.text}</p>

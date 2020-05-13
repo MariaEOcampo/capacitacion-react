@@ -17,11 +17,34 @@ const Comments = () =>{
     const [requiredfirstName, setRequiredFirstName] = useState(false);
     const [requiredlastName, setRequiredLastName] = useState(false);
     const [requiredEmail, setRequiredEmail] = useState(false);
-    const [requiredCommentsNew, setRequiredCommentsNew] = useState(false);    
+    const [requiredCommentsNew, setRequiredCommentsNew] = useState(false);  
+    
+    const handleInput = e => {
+        let {name, value} = e.target
+        switch (name) {
+            case "firstName":
+                setFirstName (value)
+                setRequiredFirstName(false)          
+                break;
+            case "lastName":
+                setLastName (value)
+                setRequiredLastName(false) 
+                break;
+            case "email":
+                setEmail (value)
+                setRequiredEmail(false) 
+                break;
+            case "comments":
+                setCommentsNew (value)
+                setRequiredCommentsNew(false) 
+                break;        
+            default:
+              break;
+          }
+    }
 
     const onSubmit = e => {
         e.preventDefault();
-      /*   console.log("submit", firstName) */
         if(firstName === ''){
             setRequiredFirstName(true)
             return false
@@ -39,12 +62,11 @@ const Comments = () =>{
         }
         else{
          let info = { firstName, lastName, email,commentsNew}
-            setComments(prevState => ([...prevState, info]))
-            }
+            setComments(prevState  => ([...prevState, info]))
             
+            }
         }
-    
-    
+       
     return(
         <Layout>
             <div>
@@ -55,7 +77,7 @@ const Comments = () =>{
                     type = "text"
                     name ="firstName"
                     value = {setFirstName}
-                    change = {e => setFirstName(e.target.value)}
+                    change = {handleInput}
                     placeholder="Ingresa tu nombre"
                     requiredMsg={requiredfirstName}
                     />                   
@@ -65,7 +87,7 @@ const Comments = () =>{
                     type = "text"
                     name ="lastName"
                     value = {setLastName}
-                    change = {e => setLastName(e.target.value)}
+                    change = {handleInput}
                     placeholder="Ingresa tu apellido"
                     requiredMsg={requiredlastName}/>
                 </div>        
@@ -74,7 +96,7 @@ const Comments = () =>{
                     type = "email"
                     name ="email"
                     value = {setEmail}
-                    change = {e => setEmail(e.target.value)}
+                    change = {handleInput}
                     placeholder="ejemplo@ejemplo.com"
                     requiredMsg={requiredEmail}/>
                 </div>
@@ -83,7 +105,7 @@ const Comments = () =>{
                     label="Escribinos!"
                     type="text"
                     name="comments" 
-                    change={e => setCommentsNew(e.target.value)}
+                    change={handleInput}
                     value={setCommentsNew}
                     placeholder="Esperamos tu consulta o comentario!"
                     maxlength ="150"
