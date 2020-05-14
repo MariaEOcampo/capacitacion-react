@@ -14,7 +14,7 @@ const Nav = () => {
                     <ul>
                         <li><Link to="/comments">Contactanos</Link></li>
                         <li><Link to="/article">Noticias</Link></li>
-                        <li><a href="www.google.com">Fitness</a></li>
+                        <li><a href="/fitness">Fitness</a></li>
                         <li><a href="www.google.com">Recetas</a></li>
                         <li><a href="www.google.com">Belleza</a></li>
                         <li><a href="www.google.com">Yoga y Meditación</a></li>

@@ -62,8 +62,7 @@ const Comments = () =>{
         }
         else{
          let info = { firstName, lastName, email,commentsNew}
-            setComments(prevState  => ([...prevState, info]))
-            
+            setComments(prevState  => ([...prevState, info]))            
             }
         }
        
