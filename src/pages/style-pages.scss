@@ -1,0 +1,114 @@
+@import '../components/normalization';
+
+.section{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        justify-content: center;
+        margin-top:20px;
+        margin-left:10%;
+    }
+    &__title{
+        font-family: $main-font;
+        margin-top: 40px;
+        text-align: left;
+        margin-left: 20px;
+    }
+    &__image{
+        width: 90%;
+        padding:10px 20px 10px 20px ;
+    }
+    &__text{
+        font-family: $main-font;
+        font-size: 1rem;
+        text-align: justify;
+        padding: 10px 20px 10px 20px;
+        padding-bottom: 250px;
+    }
+    &__figcaption--fitness{
+        font-family: $main-font;
+        padding-bottom: 2px;
+   }
+}
+.dots{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color:$first-color;
+    padding-top:200px;
+    padding-bottom: 200px;
+}
+.photo-container{
+    width: 40%;
+}
+.photo-fitness{
+    width: 300px;
+    height: auto;
+}
+.fitness-title{
+    font-family: $main-font;
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 700;
+}
+@media(min-width:580px){
+    .photo-fitness{
+        width: 450px;
+        height: auto;
+    }
+    .fitness-title{
+        font-family: $main-font;
+        font-size: 1.5rem;
+        text-align: left;
+        font-weight: 700;
+    }
+
+}
+
+@media(min-width:769px){
+    .section{
+        &__container{
+            display: flex;
+            flex-direction:column;
+            width: 80%;
+            justify-content: center;
+        }
+        
+        &__title{
+            font-size: 3rem;
+
+        }
+        &__image{
+            width: 70%;
+            padding:10px 20px 10px 20px ;
+            margin-left: 15%;
+        }
+        &__text{
+            font-size: 1.2rem;         
+        }
+        &__figcaption--fitness{
+            font-family: $main-font;
+            font-size: 1.2rem;
+            padding-bottom: 2px;
+            margin-left: 30%;
+       }
+       
+    }
+    .photo-fitness{
+        width:700px;
+        height: auto;
+        display: flex;
+        
+    }
+    .fitness-title{
+        font-family: $main-font;
+        font-size: 2.5rem;
+        padding-bottom: 30px;
+        text-align: left;
+        font-weight: 700;
+    }
+ 
+}

@@ -1,0 +1,101 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
+@import '../normalization';
+     
+@media(min-width:360px){
+#nav_check-menu {
+    display: none;
+    width: 100%;
+} 
+.nav{
+    width: 100%;
+    background-color: $main-color;
+    &__label {
+        display: block;
+        width: 100%;
+            &:hover {
+                cursor: pointer;
+                background-color: $tertiary-color;
+        }
+    }          
+        &__menu {
+            position: absolute;
+            background-color:$main-color;
+            width: 40%;
+            margin-left: -70%;
+            transition:all 1s;
+            
+        }
+            &__menu ul {
+                flex-direction: column;
+                list-style: none;
+                li{
+                    font-family: $main-font;
+                    font-size: 1rem;
+                    text-align: center;
+                        &:hover {
+                            background-color: $tertiary-color;
+                        }
+                        a {
+                            display: block;
+                            padding: 10px 10px;
+                            text-decoration: none;
+                            color: $secondary-color;
+                        }
+
+                }
+        }
+        
+}
+}
+
+#nav_check-menu:checked ~ .nav__menu{
+    margin:0;
+}
+@media(min-width:768px){
+    .nav {
+    width: 100%;
+    background-color: $main-color;
+    height: 20px;
+
+        &__menu {
+        position: relative;
+        background-color:$main-color;
+        width: 100%;
+        margin-left: 0%;
+        margin-top:10px;
+        transition:none;
+        }
+     
+            &__menu ul {
+                position: relative;
+                align-items: center;
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                width: 100vw;
+                padding: 0px;
+                     
+                    li {
+                        font-family: $main-font;
+                        font-size: 1rem;
+                        text-align: center;
+                        padding:5px 5px;
+                         width: 100%;
+                            &:hover {
+                                background-color: $tertiary-color;
+                            }
+                        a {
+                            display: block;
+                            padding: 15px 20px;
+                            text-decoration: none;
+                            color: $secondary-color;
+                        }
+                }
+        }
+        &__label {
+            display: none;
+        }
+}
+
+}
+    
